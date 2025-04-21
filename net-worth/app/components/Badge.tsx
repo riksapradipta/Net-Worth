@@ -11,16 +11,16 @@ const Badge: React.FC<{ text: string }> = ({ text }) => {
 
 const styles = StyleSheet.create({
     badge: {
-        backgroundColor: 'rgb(170, 255, 0)', // Green with 20% opacity
+        backgroundColor: '#CCFF40', // Green with 20% opacity
         borderRadius: 24,
         paddingVertical: 4,
-        paddingHorizontal: 12,
+        paddingHorizontal: 8,
         alignSelf: 'flex-start',
     },
     text: {
         color: 'black',
-        fontWeight: '400',
-        fontSize: 14
+        fontWeight: '600',
+        fontSize: 12
     },
 });
 

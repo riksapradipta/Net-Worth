@@ -1,11 +1,17 @@
 import { StyleSheet, Text, View } from "react-native";
 import Button from "./components/Button";
 import Badge from "./components/Badge";
+import Card from "./components/Card";
 
 export default function Index() {
   return (
+
     <View style={style.mainContainer}>
+
+
       <Text style={style.header}>Net Worth</Text>
+      <Card title = "Bibit" description="Rp 25.000.000" ></Card>
+
       <View style={style.container}>
         <View style={{ flex: 1, flexDirection: "column", gap: 4 }}>
           <Text style={{ fontSize: 16, fontWeight: "500" }}>Button</Text>
