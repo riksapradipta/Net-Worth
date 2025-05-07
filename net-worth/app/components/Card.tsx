@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Badge from "./Badge";
+import Button from "./Button";
 
 type CardProps = {
   title: string;
@@ -15,8 +16,9 @@ const Card = (props: CardProps) => {
         <Text style={styles.description}>{props.description}</Text>
         <Text style={styles.updated}>Last Updated 4 min ago</Text>
       </View>
-      <View>
+      <View style={{width:"auto", gap: 12, flexDirection: "column", alignItems: "flex-end"}}>
         <Badge text="+54%" />
+        <Button icon="caretright" type="tertiary" text="Adjust" />
       </View>
     </View>
   );
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 20,
     fontWeight: "600",
-    paddingBottom:16,
+    // paddingBottom:16,
   },
   updated: {
     fontSize: 10,

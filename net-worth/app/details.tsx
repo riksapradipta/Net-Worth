@@ -1,16 +1,15 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
-import Card from "./components/Card";
+import { StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
 import {
   PlusJakartaSans_700Bold,
   PlusJakartaSans_400Regular,
   PlusJakartaSans_500Medium,
 } from "@expo-google-fonts/plus-jakarta-sans";
-import { Link } from "expo-router";
+import AntDesign from "@expo/vector-icons/AntDesign";
 import Badge from "./components/Badge";
-import Button from "./components/Button";
+import { Link } from "expo-router";
 
-export default function Index() {
+export default function Details() {
   const [loaded] = useFonts({
     PlusJakartaSans_700Bold,
     PlusJakartaSans_400Regular,
@@ -22,33 +21,28 @@ export default function Index() {
   }
 
   return (
-    <SafeAreaView style={style.mainContainer}>
+    <View style={style.mainContainer}>
       <View style={style.headerContainer}>
-        <Text style={style.header}>Net Worth</Text>
-      </View>
-      <View style={style.headerContainer}>
-        <Text>Recent Transactions</Text>
-        <Link href="/details">
-          <Button type="secondary" text="Add New Investment" />
+        <Link href="/">
+          <AntDesign name="leftcircleo" size={24} color="black" />
         </Link>
+        <Text style={style.header}>Add New Investment</Text>
       </View>
-
-      <Card title="Bibit" description="Rp 25.000.000"></Card>
-    </SafeAreaView>
+    </View>
   );
 }
 
 export const style = StyleSheet.create({
   header: {
+    marginLeft: 16,
     fontSize: 24,
     fontFamily: "PlusJakartaSans_700Bold",
   },
   headerContainer: {
     flexDirection: "row",
     width: "100%",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     alignItems: "center",
-    marginBottom: 16
   },
   cardHeader: {
     fontSize: 20,
